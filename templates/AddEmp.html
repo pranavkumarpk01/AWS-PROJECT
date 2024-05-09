@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add Employee Information</title>
+    <title>Add Employee Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Light grey background */
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+        h1 {
+            color: dodgerblue;
+            text-align: center;
+        }
+        form {
+            text-align: left;
+        }
+        input[type="text"],
+        input[type="number"],
+        button {
+            height: 25px;
+            font-size: 14pt;
+            color: grey;
+            width: calc(100% - 20px);
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc; /* Grey border */
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            background-color: dodgerblue; /* Dodger blue button background */
+            color: white;
+            font-style: oblique;
+            cursor: pointer;
+        }
+        a {
+            color: dodgerblue;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-<center>
-	<font color="black" size="4" style="font-family: avenir">
-
-		<h1 style="color: DodgerBlue">Employee Database</h1>
-
-		<body bgcolor="lightgrey">
-
-			<form action="/addemp" autocomplete="on" method = "POST" enctype="multipart/form-data">
-
-				<button type="submit" formaction="/getemp" style="background: grey; height: 45px; width: 200px; color:white; font:oblique;">GET EMPLOYEE INFORMATION</button><br><br>
-
-		  		Employee ID:<br> <input style="height:25px;font-size:14pt; color:grey;" type="number" name="emp_id" autofocus size="40"><br><br>
-
-		  		First Name:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text" name="first_name" ><br><br>
-
-		  		Last Name:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text" name="last_name"><br><br>
-
-		  		Primary Skills:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text" name="pri_skill"><br><br>
-
-		  		Location:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text" name="location"><br><br>
-
-		  		Image: <input type=file name="emp_image_file" style="height:25px;font-size:14pt;color:grey;"> <br><br>
-
-		  		<button type="submit" style="background: grey; height: 45px; width: 200px; color: white; size: 5; font:oblique;">UPDATE DATABASE</button>
-
-			</form>
-<a href="/about">About Us</a>
-		</body>
-
-	</font>
-</center>
+<body>
+    <div class="container">
+        <h1>Employee Database</h1>
+        <form action="/addemp" autocomplete="on" method="POST">
+            <button type="submit" formaction="/getemp">GET EMPLOYEE INFORMATION</button><br><br>
+            Employee ID:<br> <input type="number" name="emp_id" autofocus><br>
+            First Name:<br> <input type="text" name="first_name"><br>
+            Last Name:<br> <input type="text" name="last_name"><br>
+            Primary Skills:<br> <input type="text" name="pri_skill"><br>
+            Location:<br> <input type="text" name="location"><br>
+            <button type="submit">UPDATE DATABASE</button>
+        </form>
+        <a href="/about">About Us</a>
+    </div>
+</body>
 </html>
+
