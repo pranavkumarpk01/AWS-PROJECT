@@ -22,7 +22,7 @@ def home():
 
 @app.route("/about", methods=['POST'])
 def about():
-    return render_template('AddEmpOutput.html')
+    return render_template('www.github.com')
 
 
 @app.route("/addemp", methods=['POST'])
